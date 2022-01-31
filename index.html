@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <!-- Logo -->
+      <div>
+        <img class="logo" src="img/logo-img.png" alt="logo img" width="450">
+      </div>
+
+      <!-- Form -->
+      <form
+        class="form search-form"
+        spellcheck="false"
+        autocomplete="off"
+      >
+      <select class="select-all js-select">
+        <option value="all">
+          All
+        </option>
+      </select>
+
+        <input
+          class="form-input js-input"
+          type="text"
+          placeholder="Search"
+        />
+
+        <select class="select-letter js-sort">
+          <option value="az">
+            Aa-Zz
+          </option>
+          <option value="za">
+            Zz-Aa
+          </option>
+          <option value="new-old">
+            New-old
+          </option>
+          <option value="old-new">
+            Old-new
+          </option>
+          <option value="high-low">
+            1-10
+          </option>
+          <option value="low-high">
+            10-1
+          </option>
+        </select>
+
+        <button type="submit" class="btn btn-success ml-4 w-25">Add</button>
+      </form>
+
+      <button class="bookmark_btn open-btn">Bookmark</button>
+      <ul class="bookmark-wrapper lists">
+      </ul>
+
+      <ul class="list js-list">
+      </ul>
+      <nav class="d-flex justify-content-center mb-5" aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <button class="page-link prev-btn">Prev</button>
+          </li>
+          <li class="page-item">
+            <button class="page-link next-btn">Next</button>
+          </li>
+        </ul>
+      </nav>
+
+                          <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Close">Х</button>
+              </div>
+
+              <div>
+                <a class="modal-link" href="">
+                  <img class="modal-images img" src="" alt="modal-img" width="350" height="350">
+                </a>
+              </div>
+              <div class="modal-body modal-text text">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <template class="movie-card">
+      <li class="item">
+        <img class="item-img js-img" src="img/petr-img.png" alt="img" width="250">
+        <div>
+          <h3 class="item-title js-title"></h3>
+          <p class="item-text js-text"></p>
+          <span class="item-date movie-date">2017</span>
+          <span class="item-start movie-rayting">7.1</span>
+          <button 
+          class="item-btn js-more" 
+          data-bs-toggle="modal" 
+          data-bs-target="#exampleModal">
+          See More
+        </button>
+          <button class="item-like js-save-btn">Bookmark</button>
+        </div>
+      </li>
+    </template>
+
+      <template class="bookmark-template">
+        <li class="bookmarked-movie list-group-item d-flex justify-content-between align-items-center bookmark-item">
+          <h3 class="bookmarked-title script-title h5 "></h3>
+          <button class="btn btn-sm btn-danger js-bookmarked-btn js-delete-btn">Remove</button>
+        </li>
+      </template>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/movies.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/likes.js"></script>
+  </body>
+</html>
