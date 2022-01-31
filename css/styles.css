@@ -82,11 +82,11 @@ h1 {
   border: 1px solid #222;
   max-width: 195px;
   width: 100%;
-  height: 470px;
+  height: 400px;
   background-color: rgb(250, 249, 242);
   padding: 10px;
   margin-bottom: 50px;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .item:nth-child(4n) {
